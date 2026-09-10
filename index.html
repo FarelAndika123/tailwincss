@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 min-h-screen">
+<header class="sticky top-0 z-50 bg-slate-900 text-white">
+  <!-- class="flex justify-between
+     items-center p-4">
+     <span>Logo</span>
+     <div class="flex gap-4">
+        <a>Home</a><a>About</a><a>Contact</a>
+     </div>
+  </nav>
+  <!----->
+
+  <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+   <span>Logo</span>
+   <div class="flex gap-4">
+      <a href="#" class="hover:text-slate-300">Home</a>
+      <a href="#" class="hover:text-slate-300">About</a>
+      <a href="#" class="hover:text-slate-300">Contact</a>
+  </nav>
+
+  <button id="menuBtn" class="md:hidden text-white" aria-label="Buka menu"
+  aria-expanded="false">
+  <svg viewBox="0 0 24 24"class="h-7 w-7" fill="none" stroke="currentColor"
+  stroke-width="2">
+    <path d="M4 6h16M4 12h16M4 18h16" stroke-linecap="round" stroke-linejoin="round"/>
+  </svg>
+</button>
+</header>
+     <section class="flex flex-col
+     items-center justify-between
+     text-center py-24 px-6">
+     <h1 class="text-4xl font-bold">Judul Utama</h1>
+     <p>Sub-judul singkat...</p>
+     <button>Mulai Sekarang</button>
+   </section>
+
+ <section class="grid grid-cols-1
+   md:grid-cols-3 gap-6 p-8">
+   <div class="rounded-lg shadow p-6 bg-slate-500">Fitur 1</div>
+</div>
+<div class="rounded-lg shadow p-6 bg-slate-500">Fitur 2</div>
+<div class="rounded-lg shadow p-6 bg-slate-500">Fitur 3</div>
+</section>
+
+<form class="flex flex-col gap-4 p-6">
+   <label for="whatsapp">Whatsapp:</label>
+   <input type="text" id="whatsapp" name="whatsapp"
+      class=border rounded p-2 />
+   <button type="submint"
+   class="bg-blue-500 text-white p-2 rounded">Kirim</button>
+</form>
+   <footer class="flex justify-between items-ceneter p-4">
+      <p>&copy; 2026 Farel</p>
+      <div class="flex gap-4">
+         <a>IG</a><a>GitHub</a>
+      </div>
+   </footer>
+
+   const menuBtn = document.getElementById('menuBtn');
+   const mobileMenu = document.getElementById('mobileMenu');
+   menuBtn.addEventListener('click', () => {
+      const is0pen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden', is0pen);
+      mobileMenu.classList.toggle('flex', !is0pen);
+      menuBtn.setAttribute('aria-expanded', String(!is0pen));
+      menuBtn.setAttribute('aria-label', is0pen ? 'Buka menu' : 'Tutup menu');
+   });
+
+</html>
+</body>
