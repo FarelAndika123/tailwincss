@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 min-h-screen">
+   <header class="sticky top-0 z-50 bg-slate-900 text-white">
+      <!-- class="flex justify-between
+         items-center p-4">
+         <span>Logo</span>
+         <div class="flex gap-4">
+            <a>Home</a><a>About</a><a>Contact</a>
+         </div>
+      </nav> -->
+
+      <nav class="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+         <span>Logo</span>
+         <div class="hidden md:flex gap-4">
+            <a href="#" class="hover:text-slate-300">Home</a>
+            <a href="#" class="hover:text-slate-300">About</a>
+            <a href="#" class="hover:text-slate-300">Contact</a>
+         </div>
+         <button id="menuBtn" class="md:hidden text-white" aria-label="Buka menu" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+               stroke="currentColor" class="size-6">
+               <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+            </svg>
+         </button>
+      </nav>
+
+      <!-- sidebar -->
+      <aside class="fixed hidden top-0 right-0 w-64 h-full bg-slate-800" id="mobileMenu">
+         <div class="px-6 py-4">
+            <button id="closeBtn" class="md:hidden text-white" aria-label="Tutup menu" aria-expanded="false">
+               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                  stroke="currentColor" class="size-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+               </svg>
+            </button>
+         </div>
+         <div class="flex flex-col gap-4 px-6 py-4">
+            <a href="#" class="hover:text-slate-300">Home</a>
+            <a href="#" class="hover:text-slate-300">About</a>
+            <a href="#" class="hover:text-slate-300">Contact</a>
+         </div>
+      </aside>
+   </header>
+   <main>
+      <section class="flex flex-col
+        items-center justify-between
+        text-center py-24 px-6">
+         <h1 class="text-4xl font-bold">Judul Utama</h1>
+         <p>Sub-judul singkat...</p>
+         <button>Mulai Sekarang</button>
+      </section>
+
+      <section class="grid grid-cols-1
+         md:grid-cols-3 gap-6 p-8">
+         <div class="rounded-lg shadow p-6 bg-slate-500">Fitur 1</div>
+         <div class="rounded-lg shadow p-6 bg-slate-500">Fitur 2</div>
+         <div class="rounded-lg shadow p-6 bg-slate-500">Fitur 3</div>
+      </section>
+      <section>
+         <form class="flex flex-col gap-4 p-6">
+            <label for="whatsapp">Whatsapp:</label>
+            <input type="text" id="whatsapp" name="whatsapp" class=border rounded p-2 />
+            <button type="submit" class="bg-blue-500 text-white p-2 rounded">Kirim</button>
+         </form>
+      </section>
+   </main>
+   <footer class="flex justify-between items-ceneter p-4">
+      <p>&copy; 2026 Farel</p>
+      <div class="flex gap-4">
+         <a>IG</a><a>GitHub</a>
+      </div>
+   </footer>
+   <script>
+      const menuBtn = document.getElementById('menuBtn');
+      const closeBtn = document.getElementById('closeBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const toggleMenu = (open) => {
+         mobileMenu.classList.toggle('hidden', !open);
+         mobileMenu.classList.toggle('flex', open);
+         menuBtn.setAttribute('aria-expanded', String(is0pen));
+         menuBtn.setAttribute('aria-label', is0pen ? 'Buka menu' : 'Tutup menu');
+      };
+      menuBtn.addEventListener('click', () => toggleMenu(true));
+      closeBtn.addEventListener('click', () => toggleMenu(false));
+   </script>
+
+
+</html>
+</body>
